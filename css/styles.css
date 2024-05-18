@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #DAF0FF;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .calculator {
+  position: relative;
+  max-width: 280px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 10px 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.2);
+}
+body .calculator .theme {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+body .calculator .theme svg {
+  width: 25px;
+  height: 25px;
+  color: yellow;
+}
+body .calculator .theme svg.hidden {
+  display: none;
+}
+body .calculator .display {
+  width: 100%;
+  height: 180px;
+  padding: 0 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+body .calculator .display input {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: right;
+  transition: all 0.5s ease;
+}
+body .calculator .display input#operator {
+  color: #005db2;
+  font-size: 52px;
+}
+body .calculator .display input#result {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+}
+body .calculator .button {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-auto-rows: 50px;
+  justify-content: center;
+  gap: 10px;
+}
+body .calculator .button button {
+  border: none;
+  font-size: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+body .calculator .button button.special {
+  color: #858585;
+  background-color: white;
+}
+body .calculator .button button.special svg {
+  width: 30px;
+  height: 30px;
+}
+body .calculator .button button.operator {
+  color: #adE2ff;
+  background-color: #38b9ff;
+}
+body .calculator .button button.operator.equal {
+  grid-row: span 2;
+}
+body .calculator .button button.number {
+  color: #38b9ff;
+  background-color: white;
+}
+body .calculator .button button.number.zero {
+  grid-column: span 2;
+}
+body.dark {
+  background: linear-gradient(191deg, #073f74 -4.95%, #59a1e4 103.74%);
+}
+body.dark .calculator {
+  background: linear-gradient(191deg, #17181A -4.95%, #17181A 103.74%);
+  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);
+}
+body.dark .calculator .theme {
+  background-color: transparent;
+  border: 1px solid #005DB2;
+}
+body.dark .calculator .theme svg {
+  color: #005DB2;
+}
+body.dark .calculator .display #operator {
+  color: #818181;
+}
+body.dark .calculator .display #result {
+  color: white;
+}
+body.dark .calculator .button button {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+body.dark .calculator .button button.special {
+  background-color: #616161;
+  color: white;
+}
+body.dark .calculator .button button.operator {
+  background-color: #005DB2;
+}
+body.dark .calculator .button button.number {
+  background-color: #303136;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
